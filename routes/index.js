@@ -34,16 +34,9 @@ router.get('/', function(req, res) {
 
   let bl = null
   try {
-    bl = browserslist(query)
-  } catch (e) {
+    bl = browserslist(query)  } catch (e) {
     // Error
-    return res.render('index', {
-      compatible: null,
-      query: query,
-      GA_ID: GA_ID,
-      description: "A page to display compatible browsers from a browserslist string.",
-      error: e
-    })
+    console.log("Error");
   }
 
   const compatible = {}
